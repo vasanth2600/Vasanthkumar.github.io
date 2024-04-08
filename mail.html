@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initaial-scale=1.0">
+        <title> Contact </title>
+        
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+            }
+            
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #1f2421;
+                margin: 0;
+    padding: 0;
+            }
+
+            .Contact h2{
+                font-size: 40px;
+             
+              text-align: center;
+            margin-bottom: 10px;
+
+                
+            }
+
+            .Contact form{
+                width: 600px;
+                text-align: center;
+            }
+
+            .input-box .input-field{
+                width: 48.5%;
+            }
+
+            form .input-box{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+
+            }
+            .field .item{
+                width: 100%;
+                padding: 18px;
+                background: transparent;
+                border: 2px solid #0ef;
+                outline: none;
+                border-radius: 6px;
+                font-size: 16px;
+                color: #ededed;
+                margin: 12px 0;
+                
+
+            }
+            
+
+
+            .field .item::placeholder{
+                color: rgba(255, 255, 255, .3);
+            }
+
+            .field .error-txt{
+                font-size: 13px;
+                color: red;
+                text-align: left;
+                margin: -5px 0 10px;
+                display: none;
+            }
+
+            form .textarea-field .error-txt{
+                margin-top: -10px;
+            }
+
+            form .textarea-field .item{
+                resize: none;
+
+            }
+
+            form button{
+                padding: 12px 32px;
+                background: #0ef;
+                border: none;
+                outline: none;
+                border-radius: 6px;
+                box-shadow: 0 0 10px #0ef;
+                font-size: 16px;
+                color: #333;letter-spacing: 1px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 20px;
+                transition: .5s;
+
+            }
+
+            form button:hover{
+                box-shadow: none;
+            }
+
+            
+
+
+ @media (max-width: 600px) {
+    .Contact .input-box{
+     
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        
+        
+    }
+    .Contact {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+      
+    }
+  }
+
+
+
+
+
+
+                    </style>
+                    
+                    <link rel="stylesheet" href="style.css">
+                    <link id="theme-style" rel="stylesheet" href="">
+        
+    </head>
+    <body>
+ 
+       
+    <section class="Contact">
+        <h2> Contact Me </h2>
+        <form action="#">
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off" required>
+                    <div class="error-txt">Full Name can't br blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email" id="email" class="item" autocomplete="off" required>
+                    <div class="error-txt">Email can't br blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off" required>
+                    <div class="error-txt">Subject can't br blank</div>
+                </div>
+            </div>
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off" required></textarea>
+                <div class="error-txt"> Message can't br blank</div>
+            </div>
+            <button type="submit"> Send </button>
+        </form>
+   
+
+       <p style="justify-content: center; align-items: center; text-align: center; margin: 20px;">Go back to  <a href="index.html"> HOME </a></p> 
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="mail.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
